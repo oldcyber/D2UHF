@@ -97,12 +97,15 @@
           
 </section>
         
-                        <section class="summary source-code" id="source">
+                <section class="desc markdown">
+          <p>Use this for get current power value</p>
+        </section>
+                <section class="summary source-code" id="source">
           <h2><span>Implementation</span></h2>
           <pre class="language-dart"><code class="language-dart">static Future&lt;int?&gt; get readPower async {
-  final int? power = await _channel.invokeMethod(&#39;getPower&#39;);
-  return power;
-}</code></pre>
+    final int? power = await _channel.invokeMethod(&#39;getPower&#39;);
+    return power;
+  }</code></pre>
         </section>
 </section>
         

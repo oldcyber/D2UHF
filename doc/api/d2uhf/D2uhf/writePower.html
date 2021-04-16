@@ -95,13 +95,17 @@
 </ol>)
       
     </section>
+    <section class="desc markdown">
+      <p>Use this for write new power value</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
-      <pre class="language-dart"><code class="language-dart">static Future&lt;int&gt;writePower(int newPower) async {
-  final int currentPower = await _channel.invokeMethod(&#39;setPower&#39;, &lt;String, dynamic&gt;{&#39;newPower&#39;: newPower});
-  return currentPower;
-}</code></pre>
+      <pre class="language-dart"><code class="language-dart">static Future&lt;int&gt; writePower(int newPower) async {
+    final int currentPower = await _channel
+        .invokeMethod(&#39;setPower&#39;, &lt;String, dynamic&gt;{&#39;newPower&#39;: newPower});
+    return currentPower;
+  }</code></pre>
     </section>
 
   </div> <!-- /.main-content -->

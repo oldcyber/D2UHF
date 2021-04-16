@@ -97,12 +97,15 @@
           
 </section>
         
-                        <section class="summary source-code" id="source">
+                <section class="desc markdown">
+          <p>Use this for read tag ID from UHF tag</p>
+        </section>
+                <section class="summary source-code" id="source">
           <h2><span>Implementation</span></h2>
           <pre class="language-dart"><code class="language-dart">static Future&lt;String&gt; get readTag async {
-  final String tag = await _channel.invokeMethod(&#39;getTag&#39;);
-  return tag;
-}</code></pre>
+    final String tag = await _channel.invokeMethod(&#39;getTag&#39;);
+    return tag;
+  }</code></pre>
         </section>
 </section>
         
