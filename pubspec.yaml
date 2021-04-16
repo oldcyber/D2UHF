@@ -1,7 +1,6 @@
 name: d2uhf
 description: D2 UHF plugin.
 version: 0.0.1
-author: Anton Tyagniy
 homepage: https://oldcyber.xyz
 
 environment:
