@@ -14,9 +14,10 @@ class D2uhf {
     final String tag = await _channel.invokeMethod('getTag');
     return tag;
   }
-  
-  static Future<int>writePower(int newPower) async {
-    final int currentPower = await _channel.invokeMethod('setPower', <String, dynamic>{'newPower': newPower});
+
+  static Future<int> writePower(int newPower) async {
+    final int currentPower = await _channel
+        .invokeMethod('setPower', <String, dynamic>{'newPower': newPower});
     return currentPower;
   }
 }
