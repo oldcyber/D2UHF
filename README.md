@@ -1,7 +1,7 @@
 # d2uhf
 
 Plugin for working with UHF module Senter type D2 for working with tags in accordance with the standard ISO / IEC 18000-6: 2013 type C
-
+Works on IQTAB8 (IQTAB81DZU) tablet
 ## Supports:
 - Reader power reading mode
 - Reader power value recording mode

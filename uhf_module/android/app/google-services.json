@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "608084763571",
+    "project_id": "uhf-workspace",
+    "storage_bucket": "uhf-workspace.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608084763571:android:3630fcb4a4781c1b03e1c6",
+        "android_client_info": {
+          "package_name": "xyz.oldcyber.uhfmodule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608084763571-nl2c2fbcj0dki4e6hf1dsaneukmhh07u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "xyz.oldcyber.uhfmodule",
+            "certificate_hash": "71bc89b21c8e69165f42d5ffe18e89766f682b31"
+          }
+        },
+        {
+          "client_id": "608084763571-9a1dhfrn6q0djhi8ghgav8vljtiuujcp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcVLogaln9c2l3ZmizEEsQPD_rjRJUGck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608084763571-9a1dhfrn6q0djhi8ghgav8vljtiuujcp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

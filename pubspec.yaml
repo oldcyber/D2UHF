@@ -1,6 +1,7 @@
 name: d2uhf
-description: 'Plugin for working with UHF module Senter type D2 for working with tags in accordance with the standard ISO / IEC 18000-6: 2013 type C'
-version: 0.0.2
+description: 'Plugin for working with UHF module Senter type D2 for working with tags in accordance with the standard ISO / IEC 18000-6: 2013 type C
+Works with IQTAB81DZU'
+version: 0.0.3
 repository: https://github.com/oldcyber/D2UHF
 issue_tracker: https://github.com/oldcyber/D2UHF/issues
 homepage: https://oldcyber.xyz
