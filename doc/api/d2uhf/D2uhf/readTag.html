@@ -74,7 +74,11 @@
 
 
     <li class="section-title"><a href="../../d2uhf/D2uhf-class.html#static-properties">Static properties</a></li>
-    <li><a href="../../d2uhf/D2uhf/readPower.html">readPower</a></li>
+    <li><a href="../../d2uhf/D2uhf/getFrequencyRegion.html">getFrequencyRegion</a></li>
+    <li><a href="../../d2uhf/D2uhf/getPower.html">getPower</a></li>
+    <li><a href="../../d2uhf/D2uhf/getTemperature.html">getTemperature</a></li>
+    <li><a href="../../d2uhf/D2uhf/onInit.html">onInit</a></li>
+    <li><a href="../../d2uhf/D2uhf/onUnInit.html">onUnInit</a></li>
     <li><a href="../../d2uhf/D2uhf/readTag.html">readTag</a></li>
 
     <li class="section-title"><a href="../../d2uhf/D2uhf-class.html#static-methods">Static methods</a></li>
@@ -98,14 +102,14 @@
 </section>
         
                 <section class="desc markdown">
-          <p>Use this for read tag ID from UHF tag</p>
+          <p>Use this for read tag ID from UHF tag (return String)</p>
         </section>
                 <section class="summary source-code" id="source">
           <h2><span>Implementation</span></h2>
           <pre class="language-dart"><code class="language-dart">static Future&lt;String&gt; get readTag async {
-    final String tag = await _channel.invokeMethod(&#39;getTag&#39;);
-    return tag;
-  }</code></pre>
+  final String tag = await _channel.invokeMethod(&#39;getTag&#39;);
+  return tag;
+}</code></pre>
         </section>
 </section>
         
@@ -119,7 +123,7 @@
 <footer>
   <span class="no-break">
     d2uhf
-      0.0.1
+      0.0.3
   </span>
 
 </footer>

@@ -151,12 +151,44 @@
       <h2>Static Properties</h2>
 
       <dl class="properties">
-        <dt id="readPower" class="property">
-          <span class="name"><a href="../d2uhf/D2uhf/readPower.html">readPower</a></span>
+        <dt id="getFrequencyRegion" class="property">
+          <span class="name"><a href="../d2uhf/D2uhf/getFrequencyRegion.html">getFrequencyRegion</a></span>
+          <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>&gt;</span></span>         
+        </dt>
+        <dd>
+          Use this for get current frequency region (return String) 
+                  <div class="features">read-only</div>
+</dd>
+        <dt id="getPower" class="property">
+          <span class="name"><a href="../d2uhf/D2uhf/getPower.html">getPower</a></span>
           <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>&gt;</span></span>         
         </dt>
         <dd>
-          Use this for get current power value 
+          Use this for get current power value (return int) 
+                  <div class="features">read-only</div>
+</dd>
+        <dt id="getTemperature" class="property">
+          <span class="name"><a href="../d2uhf/D2uhf/getTemperature.html">getTemperature</a></span>
+          <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>&gt;</span></span>         
+        </dt>
+        <dd>
+          Use this for get current module temperature (return int) 
+                  <div class="features">read-only</div>
+</dd>
+        <dt id="onInit" class="property">
+          <span class="name"><a href="../d2uhf/D2uhf/onInit.html">onInit</a></span>
+          <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>&gt;</span></span>         
+        </dt>
+        <dd>
+          Use this for init device (return bool) 
+                  <div class="features">read-only</div>
+</dd>
+        <dt id="onUnInit" class="property">
+          <span class="name"><a href="../d2uhf/D2uhf/onUnInit.html">onUnInit</a></span>
+          <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>&gt;</span></span>         
+        </dt>
+        <dd>
+          Use this for uninit device (It is not yet clear whether this is necessary) 
                   <div class="features">read-only</div>
 </dd>
         <dt id="readTag" class="property">
@@ -164,7 +196,7 @@
           <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>         
         </dt>
         <dd>
-          Use this for read tag ID from UHF tag 
+          Use this for read tag ID from UHF tag (return String) 
                   <div class="features">read-only</div>
 </dd>
       </dl>
@@ -175,11 +207,11 @@
       <dl class="callables">
         <dt id="writePower" class="callable">
           <span class="name"><a href="../d2uhf/D2uhf/writePower.html">writePower</a></span><span class="signature">(<wbr><span class="parameter" id="writePower-param-newPower"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">newPower</span></span>)
-            <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>
+            <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>&gt;</span></span>
           </span>
                   </dt>
         <dd>
-          Use this for write new power value 
+          Use this for write new power value (return bool) 
                   
 </dd>
       </dl>
@@ -210,7 +242,11 @@
 
 
     <li class="section-title"><a href="../d2uhf/D2uhf-class.html#static-properties">Static properties</a></li>
-    <li><a href="../d2uhf/D2uhf/readPower.html">readPower</a></li>
+    <li><a href="../d2uhf/D2uhf/getFrequencyRegion.html">getFrequencyRegion</a></li>
+    <li><a href="../d2uhf/D2uhf/getPower.html">getPower</a></li>
+    <li><a href="../d2uhf/D2uhf/getTemperature.html">getTemperature</a></li>
+    <li><a href="../d2uhf/D2uhf/onInit.html">onInit</a></li>
+    <li><a href="../d2uhf/D2uhf/onUnInit.html">onUnInit</a></li>
     <li><a href="../d2uhf/D2uhf/readTag.html">readTag</a></li>
 
     <li class="section-title"><a href="../d2uhf/D2uhf-class.html#static-methods">Static methods</a></li>
@@ -225,7 +261,7 @@
 <footer>
   <span class="no-break">
     d2uhf
-      0.0.1
+      0.0.3
   </span>
 
 </footer>

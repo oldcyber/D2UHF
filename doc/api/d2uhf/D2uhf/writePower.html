@@ -74,7 +74,11 @@
 
 
     <li class="section-title"><a href="../../d2uhf/D2uhf-class.html#static-properties">Static properties</a></li>
-    <li><a href="../../d2uhf/D2uhf/readPower.html">readPower</a></li>
+    <li><a href="../../d2uhf/D2uhf/getFrequencyRegion.html">getFrequencyRegion</a></li>
+    <li><a href="../../d2uhf/D2uhf/getPower.html">getPower</a></li>
+    <li><a href="../../d2uhf/D2uhf/getTemperature.html">getTemperature</a></li>
+    <li><a href="../../d2uhf/D2uhf/onInit.html">onInit</a></li>
+    <li><a href="../../d2uhf/D2uhf/onUnInit.html">onUnInit</a></li>
     <li><a href="../../d2uhf/D2uhf/readTag.html">readTag</a></li>
 
     <li class="section-title"><a href="../../d2uhf/D2uhf-class.html#static-methods">Static methods</a></li>
@@ -89,23 +93,23 @@
 </h1></div>
 
     <section class="multi-line-signature">
-      <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>
+      <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>&gt;</span></span>
             <span class="name ">writePower</span>
 (<wbr><ol class="parameter-list"><li><span class="parameter" id="writePower-param-newPower"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">newPower</span></span></li>
 </ol>)
       
     </section>
     <section class="desc markdown">
-      <p>Use this for write new power value</p>
+      <p>Use this for write new power value (return bool)</p>
     </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
-      <pre class="language-dart"><code class="language-dart">static Future&lt;int&gt; writePower(int newPower) async {
-    final int currentPower = await _channel
-        .invokeMethod(&#39;setPower&#39;, &lt;String, dynamic&gt;{&#39;newPower&#39;: newPower});
-    return currentPower;
-  }</code></pre>
+      <pre class="language-dart"><code class="language-dart">static Future&lt;bool?&gt; writePower(int newPower) async {
+  final bool? isSuccess = await _channel
+      .invokeMethod(&#39;setPower&#39;, &lt;String, int&gt;{&#39;newPower&#39;: newPower});
+  return isSuccess;
+}</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -118,7 +122,7 @@
 <footer>
   <span class="no-break">
     d2uhf
-      0.0.1
+      0.0.3
   </span>
 
 </footer>

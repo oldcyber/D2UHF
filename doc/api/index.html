@@ -57,20 +57,27 @@
   <div id="dartdoc-main-content" class="main-content">
       <section class="desc markdown">
         <h1 id="d2uhf">d2uhf</h1>
-<p>Плагин для работы с UHF модулем Senter тип D2 для работы с тэгами в соответствии с стандартом ISO/IEC 18000-6:2013 type C</p>
-<p>Plugin for working with UHF module Senter type D2 for working with tags in accordance with the standard ISO / IEC 18000-6: 2013 type C</p>
-<h2 id="">Поддерживает:</h2>
-<ul>
-<li>Режим чтения значения мощности считывателя</li>
-<li>Режим записи значения мощности считывателя</li>
-<li>Режим чтения значения метки из банка ЭПЦ.</li>
-</ul>
+<p>Plugin for working with UHF module Senter type D2 for working with tags in accordance with the standard ISO / IEC 18000-6: 2013 type C
+Works on IQTAB8 (IQTAB81DZU) tablet</p>
 <h2 id="supports">Supports:</h2>
 <ul>
 <li>Reader power reading mode</li>
 <li>Reader power value recording mode</li>
 <li>The mode of reading the label value from the EPC bank.</li>
 </ul>
+<p>First of all, you need to initialize the device
+onInit()</p>
+<pre class="language-dart"><code>Future&lt;bool&gt; _onInit() async {
+    bool success = false;
+    try {
+      success = (await D2uhf.onInit)!;
+    } on PlatformException {
+      success = false;
+    }
+    return _isSuccess = success;
+}
+</code></pre>
+<p>Then you can already execute commands for reading and writing data</p>
 <p>For Russian version see <code>README_RU.md</code></p>
       </section>
       
@@ -96,7 +103,7 @@
 <footer>
   <span class="no-break">
     d2uhf
-      0.0.1
+      0.0.3
   </span>
 
 </footer>
