@@ -30,9 +30,11 @@ android {
 }
 
 dependencies {
-    // implementation files('libs/flutter.jar')
-    // implementation("com.google.code.findbugs:jsr305:3.0.2")
-    // implementation 'androidx.annotation:annotation:1.1.0'
+/// Use for debug mode only& from here
+     //implementation files('libs/flutter.jar')
+     implementation("com.google.code.findbugs:jsr305:3.0.2")
+     implementation 'androidx.annotation:annotation:1.1.0'
+/// To here
     implementation files('libs/SenterOpenApi_IoT_1.2.3.95_Common.jar')
     implementation files('libs/SenterOpenApi_IoT_1.2.3.95_Function_UltraHighFrequency_ModelD2.jar')
 }

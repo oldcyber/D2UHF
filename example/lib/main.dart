@@ -29,37 +29,48 @@ class _HomePageState extends State<HomePage> {
   double _currentSliderValue = 0;
   String _setPower = "";
   String _currentTag = "Нет данных";
-
+  bool _isSuccess = false;
   @override
   void initState() {
     super.initState();
-    _initGetPower();
+
+    _onInit();
+    _getPower();
   }
 
-  Future<void> _initGetPower() async {
-    int? currentPower;
+  Future<bool> _onInit() async {
+    bool success = false;
     try {
-      var readPower = D2uhf.readPower;
-      currentPower = await readPower;
+      success = (await D2uhf.onInit)!;
     } on PlatformException {
-      currentPower = 0;
+      success = false;
+    }
+    return _isSuccess = success;
+  }
+
+  Future<void> _getPower() async {
+    int? power;
+    try {
+      power = await D2uhf.getPower;
+    } on PlatformException {
+      power = 0;
     }
     if (!mounted) return;
 
     setState(() {
-      _currentPower = currentPower!;
+      _currentPower = power!;
       _currentSliderValue = _currentPower.toDouble();
     });
   }
 
-  Future<int> _writePower(int newPower) async {
-    int power = 0;
+  Future<bool> _writePower(int newPower) async {
+    bool isSuccess = false;
     try {
-      power = (await D2uhf.writePower(newPower));
+      isSuccess = (await D2uhf.writePower(newPower))!;
     } on PlatformException {
-      power = 0;
+      isSuccess = false;
     }
-    return power;
+    return isSuccess;
   }
 
   Future<String> _getTag() async {
@@ -103,13 +114,17 @@ class _HomePageState extends State<HomePage> {
             Container(
               child: ElevatedButton(
                 child: Text(
-                  'Устанвить мощность $_setPower',
+                  'Установить мощность $_setPower',
                   style: TextStyle(fontSize: 22),
                 ),
                 onPressed: () {
                   _writePower(_currentSliderValue.round()).then((value) {
                     setState(() {
-                      _currentPower = value;
+                      if (!value) {
+                        return;
+                      } else {
+                        _currentPower = _currentSliderValue.round();
+                      }
                     });
                   });
                 },

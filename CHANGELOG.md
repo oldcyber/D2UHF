@@ -1,5 +1,20 @@
+## 0.0.3
+
+Rewrite Java module for switch mode. Change logic.
+Added:
+* onInit
+* getTemperature
+* getFrequencyRegion
+
+* readPower changed to getPower
+* writePower changed to newPower
+* readTag changed to getTag
+
+## 0.0.2
+Just polish for right publishings
+
 ## 0.0.1
 
 Starting from zero :)
 
-* TODO: There are no suggestions for finalizing the functional yet.
+* TODO: Wait for data instead of pause for 1 second
